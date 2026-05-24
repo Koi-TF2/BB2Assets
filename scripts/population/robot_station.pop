@@ -382,6 +382,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Buff Banner"
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -406,6 +412,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Buff Banner"
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -441,6 +453,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Battalion's Backup"
+					ItemAttributes
+					{
+						ItemName "The Battalion's Backup"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -465,6 +483,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Battalion's Backup"
+					ItemAttributes
+					{
+						ItemName "The Battalion's Backup"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -500,6 +524,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Concheror"
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -524,6 +554,12 @@ WaveSchedule
 					Skill Expert
 					Tag bot_giant
 					Item "The Concheror"
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					CharacterAttributes
 					{
 						"move speed bonus"	0.5
@@ -1383,6 +1419,12 @@ WaveSchedule
 
 					Item "The Buff Banner"
 					Item "MvM GateBot Light Soldier"
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					Skill Normal
 					Attributes SpawnWithFullCharge
 					Attributes HoldFireUntilFullReload
@@ -1399,6 +1441,12 @@ WaveSchedule
 					{
 						ItemName "MvM GateBot Light Soldier"
 						"item style override" 1
+					}
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
 					}
 					Skill Normal
 					Attributes SpawnWithFullCharge
@@ -1428,6 +1476,12 @@ WaveSchedule
 					Item "The Concheror"
 					Item "The Black Box"
 					Item "MvM GateBot Light Soldier"
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					Skill Normal
 					Attributes SpawnWithFullCharge
 					Attributes HoldFireUntilFullReload
@@ -1445,6 +1499,12 @@ WaveSchedule
 					{
 						ItemName "MvM GateBot Light Soldier"
 						"item style override" 1
+					}
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
 					}
 					Skill Normal
 					Attributes SpawnWithFullCharge
@@ -1474,6 +1534,12 @@ WaveSchedule
 					Item "The Concheror"
 					Item "The Black Box"
 					Item "MvM GateBot Light Soldier"
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
+					}
 					Skill Normal
 					Attributes AlwaysCrit
 					Attributes SpawnWithFullCharge
@@ -1492,6 +1558,12 @@ WaveSchedule
 					{
 						ItemName "MvM GateBot Light Soldier"
 						"item style override" 1
+					}
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"single wep holster time increased" 0.35
+						"single wep deploy time increased" 0.35
 					}
 					Skill Normal
 					Attributes AlwaysCrit

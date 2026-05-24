@@ -1,6 +1,6 @@
 #base robot_standard.pop
 #base robot_giant.pop
-
+#base overclock_cactus_general.pop // Dr Cactus Overclocks
 ShiveringSlumber
 {
 	StartingCurrency 900
@@ -748,7 +748,14 @@ ShiveringSlumber
 					{
 						Item "player"
 						Name "move speed bonus"
-						Value 0.001
+						Value 0.01
+						Delay 0.1
+					}
+					AddAttribute
+					{
+						Item "player"
+						Name "no_jump"
+						Value 1
 						Delay 0
 					}
 					FireInput
@@ -1760,6 +1767,30 @@ ShiveringSlumber
 				{
 					Class Soldier
 					Skill Hard
+				}
+			}
+		}
+		WaveSpawn
+		{
+			HideIcon 1
+			Support Limited
+			Squad
+			{
+				TFBot
+				{
+					ClassIcon demo_burst_homing
+				}
+				TFBot
+				{
+					ClassIcon demo_sticky_burst
+				}
+				TFBot
+				{
+					ClassIcon demo_atomic_mort
+				}
+				TFBot
+				{
+					ClassIcon demo_caber_nys
 				}
 			}
 		}

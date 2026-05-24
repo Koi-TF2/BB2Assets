@@ -70,6 +70,30 @@ WaveSchedule // 事实上这里可以是任何内容
     AddSentryBusterWhenKillCountExceeds 15 // 步哨的击杀数超过该阈值时，生成步哨毁灭者
     Advanced 1 // 开启高级难度，用于游戏的成绩统计
 
+	// Combat tank precache
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_combat_tank_chassis.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_minigun.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_railgun.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank/railgun_case.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_rocket_dumbfire.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_rocket_seeker.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/combat_tank_mk2/mk2_rocket_pod.mdl" [$SIGSEGV]
+
+	// Drill tank precache
+	PrecacheModel "models/bots/boss_bot/tank_drill.mdl" [$SIGSEGV]
+
+	// Sticky tank precache
+	PrecacheModel "models/props_mvm/stickytankturret.mdl" [$SIGSEGV]
+
+	// Tele tank precache
+	PrecacheModel "models/bots/boss_bot/boss_tank_building.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/boss_tank_building_damage1.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/boss_tank_building_damage2.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/boss_tank_building_damage3.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/tank_track_l_building.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/tank_track_r_building.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/boss_bot/bomb_mechanism_building.mdl" [$SIGSEGV]
+
     // JUDGE
     //WaveStartCountdown 3
     //MaxRedPlayers 5
@@ -1935,7 +1959,7 @@ WaveSchedule // 事实上这里可以是任何内容
         }
         Explanation
         {
-            Line "{ecd452}>Combat tanks are here! They're weaponized but can't deploy bombs, and they'll patrolling around the map."
+            Line "{ecd452}>Combat tanks are here! They're weaponized but can't deploy bombs, and they'll be patrolling around the map."
         }
         InitWaveOutput
 		{
@@ -1946,7 +1970,7 @@ WaveSchedule // 事实上这里可以是任何内容
 				EntFire(`bombpath_choose_relay`, `Kill`)
 				EntFire(`bombpath_clearall_relay`, `Trigger`)
 				EntFire(`bombpath_2_relay`, `Trigger`) // 设置该回合路线
-                //ClientPrint(null,3,`\x08ecd452FF>Combat tanks are here! They're weaponized but can't deploy bombs, and they'll patrolling around the map.`) // 战斗坦克来了！不会部署炸弹，但搭载有强力的武器的它们会在地图上巡逻。
+                //ClientPrint(null,3,`\x08ecd452FF>Combat tanks are here! They're weaponized but can't deploy bombs, and they'll be patrolling around the map.`) // 战斗坦克来了！不会部署炸弹，但搭载有强力的武器的它们会在地图上巡逻。
                 IncludeScript(`tankextensions_main`, getroottable())
                 IncludeScript(`tankextensions/combattank`, getroottable())
                 IncludeScript(`tankextensions/combattank_weapons/minigun`, getroottable())
@@ -2285,7 +2309,7 @@ WaveSchedule // 事实上这里可以是任何内容
             WaitBetweenSpawns 2
             WaitForAllSpawned "3c"
         
-            TotalCurrency 20
+            TotalCurrency 10
 
             Support 1
         
@@ -2294,6 +2318,34 @@ WaveSchedule // 事实上这里可以是任何内容
                 Template T_TFBot_Pyro_combo_flarepush
                 //Action Mobber
             }
+        }
+
+        WaveSpawn
+        {
+            Name "3support-final"
+            Where spawnbot
+            TotalCount 30
+            MaxActive 12
+            SpawnCount 2
+            WaitBeforeStarting 30
+            WaitBetweenSpawns 2
+            WaitForAllSpawned "3c"
+        
+            TotalCurrency 10
+
+            Support 1
+        
+            RandomChoice
+	    {
+		TFBot
+		{
+		    Template T_TFBot_Soldier_stock
+		}
+		TFBot
+		{
+		    Template T_TFBot_Pyro_combo_flarepush
+		}
+	    }
         }
     }
 
@@ -4085,3 +4137,7 @@ WaveSchedule // 事实上这里可以是任何内容
 //
 // Changed the text colour to increase visibility.
 // W3 - Added support bomb carrier pyros after all mainwave robots spawned (Yes this is totally not a buff).
+//
+// -Beta Update 2-
+// 
+// W3 - Added more support robots after the main wave robots all spawned.
